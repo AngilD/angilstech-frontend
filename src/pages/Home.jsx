@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+
 import HeroSlider from "../components/HeroSlider";
 export default function Home() {
   return (
@@ -65,9 +67,9 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="text-center mt-10">
+          <div className="text-center mt-12">
             <a
-              href="/open-talent"
+              href="/open-talent/tracks"
               className="inline-block bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700"
             >
               View All Tracks
@@ -97,7 +99,7 @@ export default function Home() {
 
           <div className="flex justify-center">
             <a
-              href="/open-talent"
+              href="open-talent/overview"
               className="bg-blue-600 text-white px-10 py-4 rounded-md hover:bg-blue-700"
             >
               Explore Open Talent
@@ -115,8 +117,8 @@ export default function Home() {
           Join our programs and start building real-world experience today.
         </p>
         <a
-          href="/open-talent"
-          className="bg-white text-blue-800 px-10 py-4 rounded-md font-medium hover:bg-gray-100"
+          href="pages/IndividualReg"
+          className="inline-block bg-white text-blue-800 px-10 py-4 rounded-md font-medium hover:bg-gray-100"
         >
           Get Started
         </a>

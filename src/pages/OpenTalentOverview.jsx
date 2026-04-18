@@ -131,7 +131,7 @@ export default function OpenTalentOverview() {
       </section>
 
       {/* PARTNERS */}
-      <section className="py-16 bg-gray-50">
+      {/* <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h2 className="text-2xl font-bold mb-6">Partner Companies</h2>
           <p className="text-gray-600 mb-8">
@@ -145,7 +145,7 @@ export default function OpenTalentOverview() {
             <div className="w-32 h-12 bg-gray-300 rounded"></div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* FINAL CTA */}
       <section className="py-16 bg-blue-800 text-white text-center">

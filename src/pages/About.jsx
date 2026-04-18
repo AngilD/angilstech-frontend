@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+import companyImage from "../assets/backimg.jpg";
 export default function About() {
   return (
     <main className="w-full">
@@ -28,7 +30,9 @@ export default function About() {
           </div>
 
           <div className="bg-gray-100 rounded-lg h-64 flex items-center justify-center">
-            <span className="text-gray-400">Company Image / Illustration</span>
+            {/* <span className="text-gray-400">Company Image / Illustration</span> */}
+            <img src={companyImage} alt="Company" className="rounded-lg h-64 w-full object-cover" />
+            
           </div>
         </div>
       </section>

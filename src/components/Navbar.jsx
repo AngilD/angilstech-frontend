@@ -56,8 +56,8 @@ export default function Navbar() {
 
                     {/* <a href="#" className="block px-4 py-2 hover:bg-gray-100">Overview</a> */}
                     {/* <a href="#" className="block px-4 py-2 hover:bg-gray-100">Tracks</a> */}
-                    <a href="#" className="block px-4 py-2 hover:bg-gray-100">How It Works</a>
-                    <a href="#" className="block px-4 py-2 hover:bg-gray-100">Apply</a>
+                    {/* <a href="#" className="block px-4 py-2 hover:bg-gray-100">How It Works</a> */}
+                    {/* <a href="#" className="block px-4 py-2 hover:bg-gray-100">Apply</a> */}
                     <a href="#" className="block px-4 py-2 hover:bg-gray-100">Success Stories</a>
                   </div>
                 )}
