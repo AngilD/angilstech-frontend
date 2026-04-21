@@ -28,7 +28,6 @@ export default function TechClubRegistration() {
       return;
     }
 
-    
     try {
 
       // fetch(`${import.meta.env.VITE_API_URL}/api/students/register`, 
@@ -58,24 +57,23 @@ export default function TechClubRegistration() {
         return;
       }
 
-      alert("Registration successful!");
+     // ✅ NEW LOGIC: This logic direct us to payments and store email and password in the browser
+      localStorage.setItem("student_email", email);
+      localStorage.setItem("student_phone", phone);
+      // localStorage.setItem("student_id",data.studentId);
 
-      // reset
-      setFullName("");
-      setEmail("");
-      setPhone("");
-      setAge("");
-      setExperienceLevel("");
-      setInstitution("");
-      setCourse("");
-      setTrack("");
-      setPassword("");
-      setConfirmPassword("");
+      if (data?.studentId) {
+      localStorage.setItem("student_id", data.studentId);
+      } else {
+        console.error("No studentId returned:".data);
+      }
 
-    } catch (error) {
+      window.location.href = "/payment";
+
+      } catch (error) {
       console.error("FRONTEND ERROR ❌", error);
       alert("Server error. Please try again later");
-    }
+      }
   };
 
   return (

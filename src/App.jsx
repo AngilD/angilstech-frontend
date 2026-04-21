@@ -14,6 +14,7 @@ import HeroSlider from "./components/HeroSlider";
 import ProtectedRoute from "./components/ProtectedRuter";
 import StudentDashboard from "./pages/StudentDashboard";
 import StudentLogin from "./pages/StudentLogin";
+import Payment from "./pages/Payment";
 
 
 
@@ -51,6 +52,7 @@ export default function App() {
           <Route path="/admin/dashboard" element={<ProtectedRoute> <AdminDashboard/> </ProtectedRoute>} /> 
           <Route path="/student/login" element={<StudentLogin />} />
           <Route path="/student/dashboard" element={<StudentDashboard />} />
+          <Route path="/Payment" element={<Payment />} />
 
         </Routes>
                
