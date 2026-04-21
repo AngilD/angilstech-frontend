@@ -14,7 +14,7 @@ import HeroSlider from "./components/HeroSlider";
 import ProtectedRoute from "./components/ProtectedRuter";
 import StudentDashboard from "./pages/StudentDashboard";
 import StudentLogin from "./pages/StudentLogin";
-import Payment from "./pages/Payment";
+import Payment from "./pages/payment";
 
 
 
