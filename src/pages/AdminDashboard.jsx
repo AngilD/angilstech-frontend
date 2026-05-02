@@ -1,3 +1,4 @@
+import { track } from "framer-motion/client";
 import { useEffect, useState } from "react";
 
 export default function AdminDashboard() {
@@ -7,6 +8,7 @@ export default function AdminDashboard() {
 
   // Upload states
   const [title, setTitle] = useState("");
+  const [track, setTrack] = useState("");
   const [description, setDescription] = useState("");
   const [file, setFile] = useState(null);
   const [uploading, setUploading] = useState(false);
@@ -110,6 +112,8 @@ const fetchLessons = () => {
   const handleUpload = async (e) => {
     e.preventDefault();
 
+    console.log("TRACK", track);
+
     if (!file || !title) {
       alert("Title and file are required");
       return;
@@ -119,6 +123,7 @@ const fetchLessons = () => {
     formData.append("file", file);
     formData.append("title", title);
     formData.append("description", description);
+    formData.append("track", track);
 
     try {
       setUploading(true);
@@ -214,6 +219,22 @@ const fetchLessons = () => {
         </div>
 
         <div>
+         <label className="block font-medium">Track</label>
+         <select
+         value={track}
+         onChange={(e) => setTrack(e.target.value)}
+         className="border p-2 w-full"
+         required
+         >
+         <option value="">Select Track</option>
+         <option value="Frontend">Frontend</option>
+         <option value="Backend">Backend</option>
+         <option value="DevOps & Cloud">DevOps & Cloud</option>
+         <option value="QA">QA</option>
+         </select>
+         </div>
+
+        <div>
           <label className="block font-medium">File (MP4 or PDF)</label>
           <input
             type="file"
@@ -241,6 +262,7 @@ const fetchLessons = () => {
         <thead>
           <tr className="bg-gray-100">
             <th className="border p-2">Title</th>
+            <th className="border p-2">Track</th>
             <th className="border p-2">Description</th>
             <th className="border p-2">Actions</th>
           </tr>
@@ -249,6 +271,7 @@ const fetchLessons = () => {
           {lessons.map((lesson) => (
             <tr key={lesson.id}>
               <td className="border p-2">{lesson.title}</td>
+              <td className="border p-2">{lesson.track}</td>
               <td className="border p-2">{lesson.description}</td>
               <td className="border p-2">
                 <button

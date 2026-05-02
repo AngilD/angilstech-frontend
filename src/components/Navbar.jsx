@@ -6,7 +6,8 @@ export default function Navbar() {
    const [openTalentOpen, setOpenTalentOpen] = useState(false);
    const [clubs, setClubs] = useState(false);
   return (
-    <nav className="w-full bg-white border-b border-gray-200">
+    // <nav className="w-full bg-white border-b border-gray-200">
+    <nav className="w-full bg-white border-b border-gray-200 relative z-50">
   <div className="max-w-7xl mx-auto px-2 py-3 grid grid-cols-3 grid-rows-2 items-start">
   {/* <div className="grid grid-cols-[auto_1fr_auto] grid-rows-2 gap-y-2 py-4"> */}
 
@@ -28,11 +29,13 @@ export default function Navbar() {
       </p>
     </div>
 
-   <div className="col-start-3 row-start-2">
+   {/* <div className="col-start-3 row-start-2"> */}
+   <div className="col-span-3 row-start-2 w-full mt-2 md:mt-4 lg:mt-0">
     <nav>
           
           
-          <ul className="absolute flex items-center gap-6 text-sm font-medium text-gray-700 z-50">
+          {/* <ul className="absolute flex items-center gap-6 text-sm font-medium text-gray-700 z-50"> */}
+          <ul className="flex items-center justify-end gap-6 w-full text-sm font-medium text-gray-700">
 
               <Link to="/" className="block px-4 py-2 hover:bg-gray-100">Home</Link>
               <Link to="/about" className="block px-4 py-2 hover:bg-gray-100">About</Link>
