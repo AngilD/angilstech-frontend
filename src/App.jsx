@@ -15,6 +15,7 @@ import ProtectedRoute from "./components/ProtectedRuter";
 import StudentDashboard from "./pages/StudentDashboard";
 import StudentLogin from "./pages/StudentLogin";
 import Payment from "./pages/payment";
+import Contact from "./pages/Contact";
 
 
 
@@ -53,6 +54,7 @@ export default function App() {
           <Route path="/student/login" element={<StudentLogin />} />
           <Route path="/student/dashboard" element={<StudentDashboard />} />
           <Route path="/Payment" element={<Payment />} />
+          <Route path="/contact" element={<Contact />} />
 
         </Routes>
                

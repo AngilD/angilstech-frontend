@@ -92,7 +92,8 @@ export default function Navbar() {
                 )}
               </li>
               <li><a href="#" className="hover:text-blue-600">Outsourcing</a></li>
-              <li><a href="#" className="hover:text-blue-600">Contact</a></li>
+              <Link to="/contact" className="block px-4 py-2 hover:bg-gray-100">Contact</Link>
+              {/* <li><a href="#" className="hover:text-blue-600">Contact</a></li> */}
 
             </ul>
          
