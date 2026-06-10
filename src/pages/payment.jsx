@@ -19,7 +19,7 @@ export default function Payment() {
   console.log("SENDING:", {
     student_id,
     phone,
-    amount: 1,
+    amount: 1000,
     method: "mpesa"
   });
 
