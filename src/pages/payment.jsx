@@ -28,7 +28,7 @@ export default function Payment() {
     setLoading(false);
     return;
   }
-
+//Set Mpesa amout
   try {
     const res = await fetch(`${import.meta.env.VITE_API_URL}/api/payments/start`, {
       method: "POST",
@@ -37,7 +37,7 @@ export default function Payment() {
       },
       body: JSON.stringify({
         student_id: Number(student_id), // ✅ FIX
-        amount: 1,
+        amount: 1000,
         method: "mpesa",
         phone,
       }),
