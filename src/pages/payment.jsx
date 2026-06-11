@@ -72,9 +72,14 @@ export default function Payment() {
         headers: {
           "Content-Type": "application/json",
         },
+        // body: JSON.stringify({
+        //   student_id,
+        // }),
+
         body: JSON.stringify({
-          student_id,
+        amount: "10.00"
         }),
+        
       });
 
       const data = await res.json();
