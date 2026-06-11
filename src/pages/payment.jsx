@@ -67,7 +67,7 @@ export default function Payment() {
     setLoading(true);
 
     try {
-      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/payments/paypal/create-order`,  {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/paypal/create-order`,  {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
