@@ -67,6 +67,12 @@ export default function Payment() {
     setLoading(true);
 
     try {
+      console.log("API URL =", import.meta.env.VITE_API_URL);
+
+      const url = `${import.meta.env.VITE_API_URL}/api/paypal/create-order`;
+
+      console.log("Calling:", url);
+
       const res = await fetch(`${import.meta.env.VITE_API_URL}/api/paypal/create-order`,  {
         method: "POST",
         headers: {
