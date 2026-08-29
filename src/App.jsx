@@ -89,7 +89,7 @@ export default function App() {
         <h2>Contact Us</h2>
         <p>P.O. Box 445, Nairobi, Kenya</p>
         <p>+254726302779</p>
-        <p>angilstech@org.ke</p>
+        <p>www.angilstech.com</p>
 
       </section>
     </div>
