@@ -84,7 +84,7 @@ export default function Contact() {
         <p className="mb-6"><strong>Hours:</strong> Mon - Fri, 8AM - 5PM</p>
 
         <a
-          href="https://wa.me/2547XXXXXXXX?text=Hello%20AngilsTech"
+          href="https://wa.me/254726302779?text=Hello%20AngilsTech"
           target="_blank"
           rel="noopener noreferrer"
           className="block text-center bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg"
