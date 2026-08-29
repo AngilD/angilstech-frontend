@@ -14,9 +14,26 @@ export default function Contact() {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    alert("Message submitted!");
-  };
+  e.preventDefault();
+
+  const whatsappNumber = "254726302779";
+
+  const message = `
+Hello AngilsTech,
+
+Name: ${form.name}
+Email: ${form.email}
+Phone: ${form.phone}
+Subject: ${form.subject}
+
+Message:
+${form.message}
+  `;
+
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+  window.open(whatsappUrl, "_blank");
+};
 
   return (
     <div className="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-2 gap-10">
@@ -67,9 +84,10 @@ export default function Contact() {
             className="w-full border p-3 rounded-lg"
           ></textarea>
 
-          <button className="bg-blue-600 text-white px-6 py-3 rounded-lg w-full">
-            Send Message
-          </button>
+          <button
+            type="submit"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg w-full"
+           ></button>
 
         </form>
       </div>
